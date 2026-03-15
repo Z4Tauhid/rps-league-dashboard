@@ -44,16 +44,16 @@ The backend follows a layered architecture:
 
 Client (React)
        │
-       ▼
+       
 Routes
        │
-       ▼
+       
 Controllers
        │
-       ▼
+       
 Services
        │
-       ▼
+       
 External RPS API
 
 Tech Stack:
