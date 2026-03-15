@@ -224,7 +224,7 @@ const MatchResultsByRange = () => {
       {/* NO DATA */}
 
       {!loading && matches.length === 0 && (
-        <p className="text-gray-300 text-center">No matches found. Last 7 Days History are available</p>
+        <p className="text-gray-300 text-center">No matches found.</p>
       )}
 
 

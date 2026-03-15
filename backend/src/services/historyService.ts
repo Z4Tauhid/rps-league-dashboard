@@ -10,7 +10,7 @@ export const fetchHistory = async () => {
   let allMatches: any[] = [];
 
   let page = 0;
-  const MAX_PAGES = 160;
+  const MAX_PAGES = 365;
 
   while (url && page < MAX_PAGES) {
     try {
