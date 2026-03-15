@@ -23,7 +23,7 @@ const LiveLeaderboard = () => {
   const [players, setPlayers] = useState<Player[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const API = "http://localhost:5000/api";
+  const API = "https://rps-backend-ip44.onrender.com/api";
 
   
 

@@ -38,7 +38,7 @@ export default function Home() {
   const [matches,setMatches] = useState<Match[]>([]);
   const [loading,setLoading] = useState(true);
 
-  const API = "http://localhost:5000/api/matches/latest";
+  const API = "https://rps-backend-ip44.onrender.com/api/matches/latest"; 
 
   useEffect(()=>{
 

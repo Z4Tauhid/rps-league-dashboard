@@ -27,7 +27,7 @@ const MatchResultsByRange = () => {
   const [singleDate, setSingleDate] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API = "http://localhost:5000/api/matches";
+  const API = "https://rps-backend-ip44.onrender.com/api/matches";
 
   /* ---------------- RANGE SEARCH ---------------- */
 

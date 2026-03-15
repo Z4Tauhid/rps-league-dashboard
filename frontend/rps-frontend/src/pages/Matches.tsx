@@ -24,7 +24,7 @@ const LatestMatches = () => {
   const [matches, setMatches] = useState<Match[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const API = "http://localhost:5000/api";
+  const API = "https://rps-backend-ip44.onrender.com/api";
 
   /* ---------------- FETCH HISTORY ---------------- */
 

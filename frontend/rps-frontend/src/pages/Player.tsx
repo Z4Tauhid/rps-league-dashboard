@@ -38,7 +38,7 @@ const PlayerMatchResults = () => {
   const [startDate,setStartDate] = useState("");
   const [endDate,setEndDate] = useState("");
 
-  const API = "http://localhost:5000/api";
+  const API = "https://rps-backend-ip44.onrender.com/api";
 
   /* ---------------- FETCH LATEST MATCHES ---------------- */
 
