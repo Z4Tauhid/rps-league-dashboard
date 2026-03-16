@@ -30,8 +30,21 @@ export const getMatchesByDate = (req: Request, res: Response) => {
 
     const matches = getMatches();
 
-    const startTime = new Date(`${date}T00:00:00Z`).getTime();
-    const endTime = new Date(`${date}T23:59:59.999Z`).getTime();
+    const selected = new Date(date as string);
+
+    const startTime = new Date(
+      selected.getFullYear(),
+      selected.getMonth(),
+      selected.getDate(),
+      0, 0, 0, 0
+    ).getTime();
+
+    const endTime = new Date(
+      selected.getFullYear(),
+      selected.getMonth(),
+      selected.getDate(),
+      23, 59, 59, 999
+    ).getTime();
 
     const filtered = matches.filter(
       (m) => m.time >= startTime && m.time <= endTime
@@ -56,14 +69,29 @@ export const getMatchesByRange = (req: Request, res: Response) => {
 
     const matches = getMatches();
 
-    const startTime = new Date(`${start}T00:00:00Z`).getTime();
-    const endTime = new Date(`${end}T23:59:59.999Z`).getTime();
+    const startDate = new Date(start as string);
+    const endDate = new Date(end as string);
+
+    const startTime = new Date(
+      startDate.getFullYear(),
+      startDate.getMonth(),
+      startDate.getDate(),
+      0,0,0,0
+    ).getTime();
+
+    const endTime = new Date(
+      endDate.getFullYear(),
+      endDate.getMonth(),
+      endDate.getDate(),
+      23,59,59,999
+    ).getTime();
 
     const filtered = matches.filter(
       (m) => m.time >= startTime && m.time <= endTime
     );
 
     res.json(filtered);
+
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Error fetching matches by range" });
