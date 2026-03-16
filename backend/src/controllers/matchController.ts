@@ -44,7 +44,7 @@ export const getMatchesByDate = (req: Request, res: Response) => {
     endTime.setHours(23, 59, 59, 999);
 
     const filtered = matches.filter(
-      (m) => m.time >= startTime && m.time <= endTime
+      (m) => m.time >= startTime.getTime() && m.time <= endTime.getTime()
     );
 
     res.json(filtered);
@@ -81,7 +81,7 @@ export const getMatchesByRange = (req: Request, res: Response) => {
     endTime.setHours(23,59,59,999);
 
     const filtered = matches.filter(
-      (m) => m.time >= startTime && m.time <= endTime
+      (m) => m.time >= startTime.getTime() && m.time <= endTime.getTime()
     );
 
     res.json(filtered);
