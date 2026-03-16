@@ -5,7 +5,13 @@ export const setMatches = (data: any[]) => {
 };
 
 export const addMatch = (match: any) => {
-  matches.push(match);
+
+  const newMatch = {
+    ...match,
+    time: Date.now()   
+  };
+
+  matches.push(newMatch);
 };
 
 export const getMatches = () => matches;
